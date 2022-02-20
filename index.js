@@ -108,7 +108,7 @@ client.on('qr', () => {
             mek = mek.messages.all()[0]
 			if (!mek.message) return
 			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
-			if (!mek.key.fromMe) return // For Self-Bot
+			if (!mek.key.fromMe) return // Self-Bot
 			global.prefix
 			global.blocked
 			const content = JSON.stringify(mek.message)
@@ -196,7 +196,7 @@ client.on('qr', () => {
 			if (authorname != undefined) { } else { authorname = groupName }	
 			
 			function addMetadata(packname, author) {
-				if (!packname) packname = 'WABot'; if (!author) author = 'Bot';	
+				if (!packname) packname = 'WABot'; if (!author) author = 'Aiman';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -239,11 +239,11 @@ client.on('qr', () => {
 				case 'help':
 				case 'menu':
 					/** get apikey on https://leyscoders-api.herokuapp.com/api */
-					teks =`「 SELF-BOT LeysCoders-Api 」
+					teks =`「 SELF-BOT 」
 
 • Lib: Baileys
 • Prefix: 「 ${prefix} 」
-• Recode: Febb
+• Recode: Aiman
 • ${week} ${weton}, ${date}
 
 ╭── -> STICKER
